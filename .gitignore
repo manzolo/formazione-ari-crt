@@ -1,0 +1,7 @@
+media/
+!media/.gitkeep
+db.sqlite3
+db/
+!db/.gitkeep
+.venv/
+.idea/

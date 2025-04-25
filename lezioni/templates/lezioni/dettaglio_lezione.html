@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ lezione.titolo }}</title>
+</head>
+<body>
+    <h1>{{ lezione.titolo }}</h1>
+    <div>
+        <h2>Video</h2>
+        <a href="{{ lezione.url_video }}" target="_blank">Guarda su Youtube</a>
+
+    </div>
+    <div>
+        <h2>Slide</h2>
+        <a href="{{ lezione.file_slide.url }}" target="_blank">Scarica il PDF delle slide</a>
+    </div>
+    <div>
+        <h2>Domande</h2>
+        <a href="{{ lezione.file_domande.url }}" target="_blank">Scarica il PDF delle domande</a>
+    </div>
+    <div>
+        <h2>Risposte</h2>
+        <a href="{{ lezione.file_risposte.url }}" target="_blank">Scarica il PDF delle risposte</a>
+    </div>
+    <p><a href="{% url 'lista_lezioni' %}">Torna alla lista delle lezioni</a></p>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

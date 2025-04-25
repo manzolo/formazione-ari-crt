@@ -1,0 +1,12 @@
+services:
+  radioamatori_lezioni_web:
+    container_name: radioamatori_lezioni_web
+    image: manzolo/radioamatori_lezioni
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./db:/app/db
+      - ./media:/app/media
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SETTINGS_MODULE: lezioni_progetto.settings

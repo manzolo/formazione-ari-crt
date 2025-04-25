@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista delle Lezioni</title>
+</head>
+<body>
+    <h1>Lista delle Lezioni per Radioamatori</h1>
+    <ul>
+        {% for lezione in lezioni %}
+        <li><a href="{% url 'dettaglio_lezione' lezione.id %}">{{ lezione.titolo }}</a></li>
+        {% empty %}
+        <li>Nessuna lezione disponibile al momento.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

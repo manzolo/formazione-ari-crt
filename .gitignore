@@ -5,3 +5,4 @@ db/
 !db/.gitkeep
 .venv/
 .idea/
+.env

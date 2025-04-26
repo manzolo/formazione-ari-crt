@@ -7,6 +7,11 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#RUN python manage.py collectstatic --noinput
 
+#CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 EXPOSE 8000
+
+#CMD ["gunicorn", "--bind", "0.0.0.0:8000", "lezioni_progetto.wsgi"]
+COPY ./entrypoint.sh /
+ENTRYPOINT ["sh", "/entrypoint.sh"]

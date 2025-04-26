@@ -1,16 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lista delle Lezioni</title>
-</head>
-<body>
-    <h1>Lista delle Lezioni per Radioamatori</h1>
-    <ul>
-        {% for lezione in lezioni %}
-        <li><a href="{% url 'dettaglio_lezione' lezione.id %}">{{ lezione.titolo }}</a></li>
-        {% empty %}
-        <li>Nessuna lezione disponibile al momento.</li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'lezioni/base.html' %}
+
+{% block title %}Lista delle Lezioni{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Numero</th>
+                <th>Data</th>
+                <th>Titolo</th>
+                <th>Video</th>
+                <th>Slide</th>
+                <th>Domande</th>
+                <th>Risposte</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lezione in lezioni %}
+            <tr>
+                <td>{{ lezione.numero }}</td>
+                <td>{{ lezione.data_lezione }}</td>
+                <td>{{ lezione.titolo }}</td>
+                <td>
+                    {% if lezione.url_video %}
+                        <a href="{{ lezione.url_video }}" target="_blank">
+                            <button class="video-button">Guarda Video</button>
+                        </a>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if lezione.file_slide %}
+                        <a href="{{ lezione.file_slide.url }}" target="_blank">
+                            <button class="download-button">Scarica Slide</button>
+                        </a>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if lezione.file_domande %}
+                        <a href="{{ lezione.file_domande.url }}" target="_blank">
+                            <button class="download-button">Scarica Domande</button>
+                        </a>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if lezione.file_risposte %}
+                        <a href="{{ lezione.file_risposte.url }}" target="_blank">
+                            <button class="download-button">Scarica Risposte</button>
+                        </a>
+                    {% endif %}
+                </td>
+
+            </tr>
+            {% empty %}
+            <tr><td colspan="4">Nessuna lezione disponibile al momento.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,160 @@
+/* Stili generali (manteniamo quelli precedenti) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e9ecef;
+}
+
+.content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+h1, h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ced4da;
+    margin: 25px 0;
+}
+
+/* Stili per la tabella */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #dee2e6;
+}
+
+thead {
+    background-color: #343a40;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th:first-child { /* Stile per la colonna del numero */
+    width: 5%; /* Regola la larghezza a piacere */
+    text-align: center;
+    font-weight: bold;
+    color: #007bff; /* Un colore che risalta */
+}
+
+td:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+th:nth-child(2), /* Stile per la colonna del titolo */
+td:nth-child(2) {
+    font-weight: bold;
+}
+
+/* Stili per i pulsanti */
+.download-button {
+    background-color: #28a745; /* Verde per i download */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:hover {
+    background-color: #1e7e34;
+}
+
+.video-button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.video-button:hover {
+    background-color: #ff0000;
+}

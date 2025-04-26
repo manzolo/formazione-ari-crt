@@ -3,6 +3,14 @@
 {% block title %}Lista delle Lezioni{% endblock %}
 
 {% block content %}
+    <div class="filter-section">
+        <label for="titolo-filter">Filtra per Titolo:</label>
+        <input type="text" id="titolo-filter">
+
+        <label for="numero-filter">Filtra per Numero:</label>
+        <input type="number" id="numero-filter">
+    </div>
+
     <table>
         <thead>
             <tr>
@@ -15,45 +23,69 @@
                 <th>Risposte</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="lezioni-table-body">
             {% for lezione in lezioni %}
-            <tr>
+            <tr data-numero="{{ lezione.numero }}" data-titolo="{{ lezione.titolo|lower }}">
                 <td>{{ lezione.numero }}</td>
                 <td>{{ lezione.data_lezione }}</td>
                 <td>{{ lezione.titolo }}</td>
                 <td>
                     {% if lezione.url_video %}
-                        <a href="{{ lezione.url_video }}" target="_blank">
-                            <button class="video-button">Guarda Video</button>
-                        </a>
+                        <a href="{{ lezione.url_video }}" class="video-button" target="_blank">Guarda Video</a>
                     {% endif %}
                 </td>
                 <td>
                     {% if lezione.file_slide %}
-                        <a href="{{ lezione.file_slide.url }}" target="_blank">
-                            <button class="download-button">Scarica Slide</button>
-                        </a>
+                        <a href="{{ lezione.file_slide.url }}" class="download-button" target="_blank">Scarica Slide</a>
                     {% endif %}
                 </td>
                 <td>
                     {% if lezione.file_domande %}
-                        <a href="{{ lezione.file_domande.url }}" target="_blank">
-                            <button class="download-button">Scarica Domande</button>
-                        </a>
+                        <a href="{{ lezione.file_domande.url }}" class="download-button" target="_blank">Scarica Domande</a>
                     {% endif %}
                 </td>
                 <td>
                     {% if lezione.file_risposte %}
-                        <a href="{{ lezione.file_risposte.url }}" target="_blank">
-                            <button class="download-button">Scarica Risposte</button>
-                        </a>
+                        <a href="{{ lezione.file_risposte.url }}" class="download-button" target="_blank">Scarica Risposte</a>
                     {% endif %}
                 </td>
-
             </tr>
             {% empty %}
-            <tr><td colspan="4">Nessuna lezione disponibile al momento.</td></tr>
+            <tr><td colspan="7">Nessuna lezione disponibile al momento.</td></tr>
             {% endfor %}
         </tbody>
     </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const titoloInput = document.getElementById('titolo-filter');
+            const numeroInput = document.getElementById('numero-filter');
+            const tableBody = document.getElementById('lezioni-table-body');
+            const rows = tableBody.querySelectorAll('tr');
+
+            function filterTable() {
+                const titoloFilter = titoloInput.value.toLowerCase();
+                const numeroFilter = numeroInput.value;
+
+                rows.forEach(row => {
+                    const titolo = row.dataset.titolo;
+                    const numero = row.dataset.numero;
+                    let match = true;
+
+                    if (titoloFilter && !titolo.includes(titoloFilter)) {
+                        match = false;
+                    }
+
+                    if (numeroFilter && numero !== numeroFilter) {
+                        match = false;
+                    }
+
+                    row.style.display = match ? '' : 'none';
+                });
+            }
+
+            titoloInput.addEventListener('input', filterTable);
+            numeroInput.addEventListener('input', filterTable);
+        });
+    </script>
 {% endblock %}

@@ -9,12 +9,15 @@ services:
       - static_volume:/app/staticfiles
     ports:
       - "8000:8000"
-    environment:
-      DJANGO_SETTINGS_MODULE: lezioni_progetto.settings
-      ALLOWED_HOSTS: "localhost,127.0.0.1,127.0.0.1:8000,localhost:8000,[::1]"
-      SECRET_KEY: "changeme"
-      DEBUG: 1
-  nginx:
+    #environment:
+    #  DJANGO_SETTINGS_MODULE: lezioni_progetto.settings
+    #  ALLOWED_HOSTS: "localhost,127.0.0.1,127.0.0.1:8000,localhost:8000,[::1]"
+    #  SECRET_KEY: "changeme"
+    #  DEBUG: 1
+    env_file:
+      - .env
+
+  radioamatori_lezioni_nginx:
     image: nginx:latest
     container_name: radioamatori_lezioni_nginx
     ports:

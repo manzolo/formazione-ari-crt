@@ -42,10 +42,10 @@ nav a:hover {
 
 .content {
     background-color: #fff; /* Bianco */
-    padding: 30px;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* Ombra più leggera */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 h1, h2 {
@@ -64,12 +64,14 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Stili per il piè di pagina della PAGINA WEB (copyright, ecc.) */
 footer {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid #e0f2f7; /* Azzurro molto chiaro per il bordo */
     color: #6c757d; /* Grigio medio */
     font-size: 0.9em;
+    margin-top: 10px; /* Aggiungi un po' di spazio sopra il footer */
 }
 
 hr {

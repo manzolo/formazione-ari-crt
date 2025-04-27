@@ -15,20 +15,21 @@
         <thead>
             <tr>
                 <th>Numero</th>
-                <th>Data</th>
                 <th>Titolo</th>
+                <th>Docente</th>
                 <th>Video</th>
                 <th>Slide</th>
                 <th>Domande</th>
                 <th>Risposte</th>
+                <th>Data</th>
             </tr>
         </thead>
         <tbody id="lezioni-table-body">
             {% for lezione in lezioni %}
             <tr data-numero="{{ lezione.numero }}" data-titolo="{{ lezione.titolo|lower }}">
                 <td>{{ lezione.numero }}</td>
-                <td>{{ lezione.data_lezione }}</td>
                 <td>{{ lezione.titolo }}</td>
+                <td title="{{ lezione.docente.nominativo }}">{{ lezione.docente }}</td>
                 <td>
                     {% if lezione.url_video %}
                         <a href="{{ lezione.url_video }}" class="video-button" target="_blank">Guarda Video</a>
@@ -49,6 +50,7 @@
                         <a href="{{ lezione.file_risposte.url }}" class="download-button" target="_blank">Scarica Risposte</a>
                     {% endif %}
                 </td>
+                <td>{{ lezione.data_lezione }}</td>
             </tr>
             {% empty %}
             <tr><td colspan="7">Nessuna lezione disponibile al momento.</td></tr>

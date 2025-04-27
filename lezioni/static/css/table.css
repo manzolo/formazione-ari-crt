@@ -1,12 +1,17 @@
-/* Stili per la tabella */
+.table-responsive {
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale se la tabella è troppo grande */
+    -webkit-overflow-scrolling: touch; /* Per uno scorrimento più fluido su iOS */
+}
+
 table {
-    width: 100%;
+    width: 100%; /* La tabella occupa la larghezza del suo contenitore */
     border-collapse: collapse;
     margin-top: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Ombra leggera */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     overflow: hidden;
-    border: 1px solid #e0f2f7; /* Bordo delicato */
+    border: 1px solid #e0f2f7;
+    min-width: 600px; /* Imposta una larghezza minima per evitare che si comprima troppo */
 }
 
 thead {

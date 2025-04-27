@@ -32,24 +32,33 @@
                 <td title="{{ lezione.docente.nominativo }}">{{ lezione.docente }}</td>
                 <td>
                     {% if lezione.url_video %}
-                        <a href="{{ lezione.url_video }}" class="video-button" target="_blank">Guarda Video</a>
+                        <a href="{{ lezione.url_video }}" target="_blank" aria-label="Guarda il video su YouTube">
+                            <i class="fab fa-youtube fa-2x video-icon"></i>
+                        </a>
                     {% endif %}
                 </td>
                 <td>
                     {% if lezione.file_slide %}
-                        <a href="{{ lezione.file_slide.url }}" class="download-button" target="_blank">Scarica Slide</a>
+                        <a href="{{ lezione.file_slide.url }}" target="_blank" aria-label="Scarica le slide">
+                            <i class="fas fa-file-pdf fa-2x download-icon"></i>
+                        </a>
                     {% endif %}
                 </td>
                 <td>
                     {% if lezione.file_domande %}
-                        <a href="{{ lezione.file_domande.url }}" class="download-button" target="_blank">Scarica Domande</a>
+                        <a href="{{ lezione.file_domande.url }}" target="_blank" aria-label="Scarica le domande">
+                            <i class="fas fa-question-circle fa-2x download-icon"></i>
+                        </a>
                     {% endif %}
                 </td>
                 <td>
                     {% if lezione.file_risposte %}
-                        <a href="{{ lezione.file_risposte.url }}" class="download-button" target="_blank">Scarica Risposte</a>
+                        <a href="{{ lezione.file_risposte.url }}" target="_blank" aria-label="Scarica le risposte">
+                            <i class="fas fa-check-circle fa-2x download-icon"></i>
+                        </a>
                     {% endif %}
                 </td>
+
                 <td>{{ lezione.data_lezione }}</td>
             </tr>
             {% empty %}

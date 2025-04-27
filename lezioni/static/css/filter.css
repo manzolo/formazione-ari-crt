@@ -1,0 +1,48 @@
+/* Stili per la sezione filtri (aggiunta) */
+.filter-section {
+    background-color: #e0f2f7; /* Azzurro molto chiaro per sfondo */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Ombra leggera */
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-section label {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.filter-section input[type="text"],
+.filter-section input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.filter-section button {
+    background-color: #457b9d; /* Blu per il pulsante Filtra */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-section button:hover {
+    background-color: #1d3557; /* Blu più scuro per l'hover */
+}
+
+.filter-section a { /* Stile per il link "Reset Filtri" */
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.filter-section a:hover {
+    color: #495057;
+    text-decoration: underline;
+}

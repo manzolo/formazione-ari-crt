@@ -1,0 +1,82 @@
+/* Stili generali */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f4f8f8; /* Grigio chiarissimo, quasi bianco */
+    color: #495057; /* Grigio scuro ma non nero */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #a8dadc; /* Azzurro polvere delicato */
+    color: #fff; /* Bianco per contrasto */
+    padding: 1.5em 0;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Ombra più leggera */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff; /* Bianco */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4edda; /* Verde chiaro per l'hover, delicato */
+}
+
+.content {
+    background-color: #fff; /* Bianco */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* Ombra più leggera */
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #343a40; /* Grigio antracite */
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff; /* Blu standard */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Blu più scuro per l'hover */
+    text-decoration: underline;
+}
+
+/* Stili per il piè di pagina della PAGINA WEB (copyright, ecc.) */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e0f2f7; /* Azzurro molto chiaro per il bordo */
+    color: #6c757d; /* Grigio medio */
+    font-size: 0.9em;
+    margin-top: 10px; /* Aggiungi un po' di spazio sopra il footer */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0f2f7; /* Azzurro molto chiaro */
+    margin: 25px 0;
+}

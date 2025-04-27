@@ -1,0 +1,56 @@
+/* Stili per la tabella */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Ombra leggera */
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #e0f2f7; /* Bordo delicato */
+}
+
+thead {
+    background-color: #457b9d; /* Blu più intenso ma non scuro */
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f1faee; /* Verde molto chiaro per la separazione */
+}
+
+th:first-child { /* Stile per la colonna del numero */
+    width: 5%;
+    text-align: center;
+    font-weight: bold;
+    color: #1d3557; /* Blu scuro ma elegante */
+}
+
+td:first-child {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+th:nth-child(2), /* Stile per la colonna del titolo */
+td:nth-child(2) {
+    font-weight: bold;
+    color: #283618; /* Verde scuro sobrio */
+}
+
+/* Centra le icone nelle celle specifiche (video, slide, domande, risposte) */
+td:nth-child(4), /* Colonna Video */
+td:nth-child(5), /* Colonna Slide */
+td:nth-child(6), /* Colonna Domande */
+td:nth-child(7)   /* Colonna Risposte */
+{
+    text-align: center;
+}
+
+/* Evidenzia la riga della tabella al passaggio del mouse */
+tbody tr:hover {
+    background-color: #ddf9fa; /* Un grigio molto chiaro */
+    cursor: pointer; /* Cambia il cursore per indicare l'interattività */
+    transition: background-color 0.3s ease; /* Aggiunge una transizione fluida */
+}

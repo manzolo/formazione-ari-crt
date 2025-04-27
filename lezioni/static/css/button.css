@@ -1,0 +1,36 @@
+
+.video-icon {
+    color: #e63946; /* Rosso per il video */
+    font-size: 2em; /* Prova un valore più grande */
+    transition: color 0.3s ease;
+}
+
+.video-icon:hover {
+    color: #c21807;
+}
+
+.download-icon.fa-file-pdf {
+    color: #007bff; /* Blu per le slide */
+    font-size: 1.8em;
+}
+
+.download-icon.fa-question-circle {
+    color: #ffc107; /* Giallo per le domande */
+    font-size: 1.8em;
+}
+
+.download-icon.fa-check-circle {
+    color: #28a745; /* Verde per le risposte */
+    font-size: 1.8em;
+}
+
+.download-icon {
+    /* Stili comuni per le icone di download (se presenti) */
+    margin-right: 5px;
+    vertical-align: middle;
+    transition: color 0.3s ease;
+}
+
+.download-icon:hover {
+    /* Stili hover comuni (se presenti) */
+}

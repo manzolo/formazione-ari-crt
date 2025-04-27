@@ -3,18 +3,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 20px;
     background-color: #f4f8f8; /* Grigio chiarissimo, quasi bianco */
-    color: #495057; /* Grigio scuro ma non nero */
     line-height: 1.6;
 }
 
 header {
-    background-color: #a8dadc; /* Azzurro polvere delicato */
-    color: #fff; /* Bianco per contrasto */
+    background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%);
+    color: #dcdcdc; /* Gainsboro - un grigio chiaro e neutro */
     padding: 1.5em 0;
     text-align: center;
     margin-bottom: 30px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Ombra più leggera */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
@@ -45,11 +44,6 @@ nav a:hover {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* Ombra più leggera */
-    margin-bottom: 20px;
-}
-
-h1, h2 {
-    color: #343a40; /* Grigio antracite */
     margin-bottom: 20px;
 }
 

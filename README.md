@@ -72,3 +72,7 @@ Segui questi passaggi per configurare ed eseguire l'applicazione sul tuo sistema
     ```
 
     Questo comando avvierà il server di sviluppo all'indirizzo `http://127.0.0.1:8000/`. Apri questo indirizzo nel tuo browser per visualizzare l'applicazione.
+
+## Screenshot
+![immagine](https://github.com/user-attachments/assets/7b64bd6e-f587-4137-acbb-7fa9f4a2dc34)
+

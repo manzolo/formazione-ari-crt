@@ -1,19 +1,5 @@
 
 services:
-  radioamatori_lezioni_db:
-    image: postgres:17  # o postgres:13 se preferisci
-    container_name: radioamatori_lezioni_db
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    ports:
-      - "5432:5432"
-    networks:
-      - radioamatori_lezioni_net
-
   radioamatori_lezioni_web:
     container_name: radioamatori_lezioni_web
     image: manzolo/radioamatori_lezioni
@@ -24,8 +10,8 @@ services:
       - "8000:8000"
     env_file:
       - .env
-    depends_on:
-      - radioamatori_lezioni_db
+    #depends_on:
+    #  - radioamatori_lezioni_db
     networks:
       - radioamatori_lezioni_net
 
@@ -44,7 +30,6 @@ services:
 
 volumes:
   static_volume: {}
-  postgres_data: {}
 
 networks:
   radioamatori_lezioni_net:

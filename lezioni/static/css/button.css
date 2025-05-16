@@ -24,6 +24,11 @@
     font-size: 1.8em;
 }
 
+.download-icon.fa-paperclip {
+    color: #4e4b4a; /* Verde per le risposte */
+    font-size: 1.8em;
+}
+
 .download-icon {
     /* Stili comuni per le icone di download (se presenti) */
     margin-right: 5px;

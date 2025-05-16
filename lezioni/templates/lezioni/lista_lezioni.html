@@ -78,13 +78,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const titoloInput = document.getElementById('titolo-filter');
-            const numeroInput = document.getElementById('numero-filter');
+            //const numeroInput = document.getElementById('numero-filter');
             const tableBody = document.getElementById('lezioni-table-body');
             const rows = tableBody.querySelectorAll('tr');
 
             function filterTable() {
                 const titoloFilter = titoloInput.value.toLowerCase();
-                const numeroFilter = numeroInput.value;
+                //const numeroFilter = numeroInput.value;
 
                 rows.forEach(row => {
                     const titolo = row.dataset.titolo;
@@ -95,16 +95,16 @@
                         match = false;
                     }
 
-                    if (numeroFilter && numero !== numeroFilter) {
-                        match = false;
-                    }
+                    //if (numeroFilter && numero !== numeroFilter) {
+                    //    match = false;
+                    //}
 
                     row.style.display = match ? '' : 'none';
                 });
             }
 
             titoloInput.addEventListener('input', filterTable);
-            numeroInput.addEventListener('input', filterTable);
+            //numeroInput.addEventListener('input', filterTable);
         });
     </script>
 {% endblock %}

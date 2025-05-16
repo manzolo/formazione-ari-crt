@@ -14,3 +14,13 @@ python3 manage.py createsuperuser
 docker compose exec radioamatori_lezioni_web python manage.py migrate
 docker compose exec radioamatori_lezioni_web python manage.py createsuperuser
 docker compose exec radioamatori_lezioni_web python manage.py changepassword manzolo
+
+
+#sqlite3 -> postgres
+#export
+docker exec -it radioamatori_lezioni_web /bin/bash
+python manage.py dumpdata --exclude=contenttypes --exclude=auth.Permission --indent 2 > datadump.json
+
+#import
+docker exec -it radioamatori_lezioni_web /bin/bash
+python manage.py loaddata datadump.json

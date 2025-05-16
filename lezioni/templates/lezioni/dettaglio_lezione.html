@@ -21,5 +21,9 @@
         <h2>Risposte</h2>
         <a href="{{ lezione.file_risposte.url }}" target="_blank">Scarica il PDF delle risposte</a>
     </div>
+    <div>
+        <h2>Allegati</h2>
+        <a href="{{ lezione.file_allegati.url }}" target="_blank">Scarica gli allegati</a>
+    </div>
     <p><a href="{% url 'lista_lezioni' %}">Torna alla lista delle lezioni</a></p>
 {% endblock %}

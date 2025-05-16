@@ -21,6 +21,7 @@
                     <th>Slide</th>
                     <th>Domande</th>
                     <th>Risposte</th>
+                    <th>Allegati</th>
                     <th>Data</th>
                 </tr>
             </thead>
@@ -55,6 +56,13 @@
                         {% if lezione.file_risposte %}
                             <a href="{{ lezione.file_risposte.url }}" target="_blank" aria-label="Scarica le risposte" title="Risposte: {{lezione.titolo}}">
                                 <i class="fas fa-check-circle fa-2x download-icon"></i>
+                            </a>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if lezione.file_allegati %}
+                            <a href="{{ lezione.file_allegati.url }}" target="_blank" aria-label="Scarica gli allegati" title="Risposte: {{lezione.titolo}}">
+                                <i class="fas fa-paperclip fa-2x attachment-icon"></i>
                             </a>
                         {% endif %}
                     </td>
